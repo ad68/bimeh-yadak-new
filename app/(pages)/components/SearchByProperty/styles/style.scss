@@ -1,0 +1,109 @@
+
+.searchByPropertyWrapper {
+  @apply w-full min-h-[1188px] mt-[280px] relative p-px pb-[60px] bg-[#e6f0fc] ;
+
+  .myWrapper {
+    @apply md:max-w-screen-xl  2md:max-w-screen-2xl min-h-[200px] m-auto mt-[-130px];
+    .blackSliderWrapper {
+      @apply bg-black w-full rounded-2xl ;
+      .title {
+        @apply block m-auto font-semibold text-center pt-12 pb-8 text-[28px] w-4/5 text-white ;
+      }
+      .filterBox {
+        @apply flex justify-center items-center mt-4 ;
+        .filterBtn {
+          @apply min-w-[100px] p-[5px] font-normal text-sm bg-[#ffffff1a] border border-solid  border-[#ffffff1a] rounded-[101px] text-white mr-2.5 ;
+          &:focus {
+            @apply border border-solid  border-[#c0c0c0] ;
+          }
+        }
+      }
+      .mySliderWrapper {
+        @apply m-auto mt-12 w-4/5 ;
+        .sliderItem {
+          @apply w-[127px] h-[108px] cursor-pointer ;
+          .label {
+            @apply font-semibold block text-center mt-2 text-xl text-[#a6a9bd];
+          }
+        }
+      }
+    }
+    .filterBtn {
+      @apply font-semibold bg-white text-gray-200 text-lg border border-solid  border-gray-100 px-4 rounded-[130px] h-[45px] min-w-[96px] ;
+      &.active {
+         @apply text-blue ;
+        .icon {
+           @apply text-blue ;
+        }
+      }
+      .icon {
+        @apply align-middle ml-[5px] ;
+      }
+    }
+    .filterBtnTiny {
+      @apply min-w-[96px] h-[33px] rounded-[234px] px-4 text-sm text-gray-200 shadow-[0px_2px_6px_0px_#00000024] font-normal bg-white ;
+      &.active {
+        @apply bg-[#e6f0fc] text-[#0165e1] ;
+        .icon {
+           @apply text-blue ;
+        }
+      }
+      .icon {
+        @apply align-middle ml-[5px] ;
+      }
+      &.tile {
+        @apply rounded-lg min-w-[38px] w-[38px] h-[38px] ;
+        transition: all 0.2s linear;
+        .icon {
+          @apply text-xl ml-0 ;
+        }
+        @apply flex justify-center items-center ;
+        &.active {
+           @apply text-blue bg-white shadow-[0px_2px_6px_0px_#0165e14d] ;
+        }
+      }
+    }
+    .productBox {
+      @apply shadow-[0px_2px_6px_0px_##00000024] bg-white rounded-xl min-h-[167px] flex ;
+      .pictureBox {
+        @apply flex items-center w-[35%];
+      }
+      .infoBox {
+        width: 63%;
+        @apply p-6;
+        header {
+          @apply flex w-full;
+          .title {
+            font-size: 18px;
+            @apply font-semibold;
+          }
+          .icon {
+            @apply h-6 w-6 cursor-pointer ;
+          }
+        }
+        .company {
+          @apply font-medium text-sm text-gray-200 ;
+          .pastDay {
+            @apply font-medium text-xs text-[#a6a9bd] ;
+          }
+        }
+        .priceBox {
+          @apply flex text-sm text-gray-200 ;
+          .label {
+            @apply font-medium text-sm text-gray-200 ;
+          }
+          .price {
+            @apply mr-auto  font-normal ;
+            .increase {
+              @apply font-semibold inline-block ml-2 text-sm text-[#7cb342] ;
+              direction: ltr;
+            }
+            strong {
+              @apply ml-2 font-semibold text-[17px] ;
+            }
+          }
+        }
+      }
+    }
+  }
+}

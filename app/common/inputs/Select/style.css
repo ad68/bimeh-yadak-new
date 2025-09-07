@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.darkSelect {
+  /*.ant-select-dropdown .ant-select-item{
+    color: white;
+  } */
+}
+.darkSelect.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  @apply bg-[#adaaaa3a]  border-none;
+}
+.darkSelect.ant-select .ant-select-arrow {
+  @apply text-white;
+}
+.darkSelect .ant-select-open .ant-select-selector {
+  @apply text-white;
+}
+.darkSelect .ant-select-selector {
+  @apply text-white;
+}
+.darkSelect .ant-select-selection-placeholder {
+  @apply text-white;
+}
+
+.ant-select-selector {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1411764706);
+}
+
+.ant-select-selector {
+  height: 50px !important; /* افزایش ارتفاع ورودی */
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

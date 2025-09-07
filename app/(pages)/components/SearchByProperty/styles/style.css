@@ -1,0 +1,107 @@
+.searchByPropertyWrapper {
+  @apply w-full min-h-[1188px] mt-[280px] relative p-px pb-[60px] bg-[#e6f0fc];
+}
+.searchByPropertyWrapper .myWrapper {
+  @apply md:max-w-screen-xl  2md:max-w-screen-2xl min-h-[200px] m-auto mt-[-130px];
+}
+.searchByPropertyWrapper .myWrapper .blackSliderWrapper {
+  @apply bg-black w-full rounded-2xl;
+}
+.searchByPropertyWrapper .myWrapper .blackSliderWrapper .title {
+  @apply block m-auto font-semibold text-center pt-12 pb-8 text-[28px] w-4/5 text-white;
+}
+.searchByPropertyWrapper .myWrapper .blackSliderWrapper .filterBox {
+  @apply flex justify-center items-center mt-4;
+}
+.searchByPropertyWrapper .myWrapper .blackSliderWrapper .filterBox .filterBtn {
+  @apply min-w-[100px] p-[5px] font-normal text-sm bg-[#ffffff1a] border border-solid  border-[#ffffff1a] rounded-[101px] text-white mr-2.5;
+}
+.searchByPropertyWrapper .myWrapper .blackSliderWrapper .filterBox .filterBtn:focus {
+  @apply border border-solid  border-[#c0c0c0];
+}
+.searchByPropertyWrapper .myWrapper .blackSliderWrapper .mySliderWrapper {
+  @apply m-auto mt-12 w-4/5;
+}
+.searchByPropertyWrapper .myWrapper .blackSliderWrapper .mySliderWrapper .sliderItem {
+  @apply w-[127px] h-[108px] cursor-pointer;
+}
+.searchByPropertyWrapper .myWrapper .blackSliderWrapper .mySliderWrapper .sliderItem .label {
+  @apply font-semibold block text-center mt-2 text-xl text-[#a6a9bd];
+}
+.searchByPropertyWrapper .myWrapper .filterBtn {
+  @apply font-semibold bg-white text-gray-200 text-lg border border-solid  border-gray-100 px-4 rounded-[130px] h-[45px] min-w-[96px];
+}
+.searchByPropertyWrapper .myWrapper .filterBtn.active {
+  @apply text-blue;
+}
+.searchByPropertyWrapper .myWrapper .filterBtn.active .icon {
+  @apply text-blue;
+}
+.searchByPropertyWrapper .myWrapper .filterBtn .icon {
+  @apply align-middle ml-[5px];
+}
+.searchByPropertyWrapper .myWrapper .filterBtnTiny {
+  @apply min-w-[96px] h-[33px] rounded-[234px] px-4 text-sm text-gray-200 shadow-[0px_2px_6px_0px_#00000024] font-normal bg-white;
+}
+.searchByPropertyWrapper .myWrapper .filterBtnTiny.active {
+  @apply bg-[#e6f0fc] text-[#0165e1];
+}
+.searchByPropertyWrapper .myWrapper .filterBtnTiny.active .icon {
+  @apply text-blue;
+}
+.searchByPropertyWrapper .myWrapper .filterBtnTiny .icon {
+  @apply align-middle ml-[5px];
+}
+.searchByPropertyWrapper .myWrapper .filterBtnTiny.tile {
+  @apply rounded-lg min-w-[38px] w-[38px] h-[38px];
+  transition: all 0.2s linear;
+  @apply flex justify-center items-center;
+}
+.searchByPropertyWrapper .myWrapper .filterBtnTiny.tile .icon {
+  @apply text-xl ml-0;
+}
+.searchByPropertyWrapper .myWrapper .filterBtnTiny.tile.active {
+  @apply text-blue bg-white shadow-[0px_2px_6px_0px_#0165e14d];
+}
+.searchByPropertyWrapper .myWrapper .productBox {
+  @apply shadow-[0px_2px_6px_0px_##00000024] bg-white rounded-xl min-h-[167px] flex;
+}
+.searchByPropertyWrapper .myWrapper .productBox .pictureBox {
+  @apply flex items-center w-[35%];
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox {
+  width: 63%;
+  @apply p-6;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox header {
+  @apply flex w-full;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox header .title {
+  font-size: 18px;
+  @apply font-semibold;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox header .icon {
+  @apply h-6 w-6 cursor-pointer;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox .company {
+  @apply font-medium text-sm text-gray-200;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox .company .pastDay {
+  @apply font-medium text-xs text-[#a6a9bd];
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox .priceBox {
+  @apply flex text-sm text-gray-200;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox .priceBox .label {
+  @apply font-medium text-sm text-gray-200;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox .priceBox .price {
+  @apply mr-auto  font-normal;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox .priceBox .price .increase {
+  @apply font-semibold inline-block ml-2 text-sm text-[#7cb342];
+  direction: ltr;
+}
+.searchByPropertyWrapper .myWrapper .productBox .infoBox .priceBox .price strong {
+  @apply ml-2 font-semibold text-[17px];
+}/*# sourceMappingURL=style.css.map */

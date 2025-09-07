@@ -1,0 +1,7 @@
+.input {
+  @apply w-[350px] h-[40px] mx-0 my-[5px] p-[15px] text-xs  border-none;
+  outline: none;
+  transition: 0.25s ease;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1411764706);
+}/*# sourceMappingURL=style.css.map */
