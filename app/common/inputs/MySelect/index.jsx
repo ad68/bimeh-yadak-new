@@ -67,7 +67,6 @@ export default function Index({
     <Select
       options={myOptions}
       isLoading={loading}
-
       onChange={setState}
       isRtl={true}
       value={state}
@@ -89,6 +88,10 @@ export default function Index({
             color: dark ? "white" : "black",
           }), */
         singleValue: (provided) => ({
+          ...provided,
+          color: dark ? "white" : "black",
+        }),
+        input: (provided) => ({
           ...provided,
           color: dark ? "white" : "black",
         }),

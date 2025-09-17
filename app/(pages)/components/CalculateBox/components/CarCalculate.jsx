@@ -319,12 +319,13 @@ export default function Index({
           <section className="flex h-[40px] w-[78%]   items-center justify-start rounded-[8px] bg-[#2f2f2f80] px-2 text-xs text-white ">
             {`${coloredParts.length > 0 ? coloredParts.length : "بدون هیچ"} قطعه رنگ شده و ${replacedParts.length > 0 ? replacedParts.length : "بدون هیچ"} قطعه تعویض شده`}
           </section>
-          <Button
+          <button
             onClick={() => setModal(true)}
+            className="bg-[#bf003b] disabled:opacity-60 hover:bg-[#8a002c] transition-all text-white rounded-lg"
             style={{ width: "20%", height: 40, fontSize: 12 }}
           >
             افزودن
-          </Button>
+          </button>
         </section>
         <section className="flex justify-center">
           <Button className="ml-2 mt-10" dark onClick={clearFrom}>
@@ -332,6 +333,7 @@ export default function Index({
           </Button>
           <Button
             loading={buttonLoading}
+            type="secondary"
             className="mt-10"
             onClick={() => {
               calculatePrice();

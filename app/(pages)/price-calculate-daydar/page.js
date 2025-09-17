@@ -1,50 +1,40 @@
-import React, { useState, useContext, useEffect } from "react";
-import { ArrowsAltOutlined, BgColorsOutlined } from "@ant-design/icons";
-import { Tabs } from "antd";
-import ColoredPart from "./components/ColoredPart";
-import ReplacedPart from "./components/ReplacedPart";
-import { Button } from "@/common";
+import Image from "next/image";
+import CalculateBox from "../components/CalculateBox";
+import CalculateBoxMobile from "../components/CalculateBoxMobile";
 //
 // ────────────────────────────────────────────────────────── I ──────────
 //   :::::: C O M P O N E N T : :  :   :    :     :        :          :
 // ────────────────────────────────────────────────────────────────────
 //
-
-export default function Index({ setReplacedPart, setColoredPart, closeModal }) {
+export const metadata = {
+  title: "ارزش روز خودرو"
+};
+export default function Index() {
   // ─── Global Variable ────────────────────────────────────────────────────────────
-  const items = [
-    {
-      key: "1",
-      label: "رنگ شدگی",
-      children: <ColoredPart setColoredPart={setColoredPart} />,
-      icon: <BgColorsOutlined />,
-    },
-    {
-      key: "2",
-      label: "تعویض شدگی",
-      children: <ReplacedPart setReplacedPart={setReplacedPart} />,
-      icon: <ArrowsAltOutlined />,
-    },
-  ];
+
   // ─── States ─────────────────────────────────────────────────────────────────────
+
+  // ─── Functions ──────────────────────────────────────────────────────────────────
 
   // ─── Life Cycle ─────────────────────────────────────────────────────────────────
 
-  // ─── Functions ──────────────────────────────────────────────────────────────────
-  const onChange = (key) => {
-    console.log(key);
-  };
   //
   // ──────────────────────────────────────────────────── I ──────────
   //   :::::: R E N D E R : :  :   :    :     :        :          :
   // ──────────────────────────────────────────────────────────────
   //
   return (
-    <section>
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
-      <div className="flex justify-center w-full">
-        <button onClick={closeModal} className="w-[200px] h-[40px] bg-[#bf003b] disabled:opacity-60 hover:bg-[#8a002c]  text-white rounded-lg  ">ثبت</button>
-      </div>
-    </section>
+    <>
+      <section className="px-5 h-[120px] xl:h-[150px] rounded-b-[50%] xl:rounded-md  w-full  border-b shadow-lg flex justify-between items-center gap-10 mb-10 xl:justify-center  font-bold  ">
+        <Image src="/assets/images/daydar.png" className="w-[150px] xl:w-[200px]" quality={100} width={300} height={300} alt="" />
+        <h1 className="text-[20px] xl:text-[40px]  font-bold text-center  text-[#009ba5]">ارزش روز خودرو</h1>
+      </section>
+      <section className="container hidden items-center justify-center lg:flex">
+        <CalculateBox />
+      </section>
+      <section className="container flex items-center justify-center lg:hidden">
+        <CalculateBoxMobile />
+      </section>
+    </>
   );
 }

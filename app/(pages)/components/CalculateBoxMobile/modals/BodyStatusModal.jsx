@@ -10,7 +10,7 @@ import { Button } from "@/common";
 // ────────────────────────────────────────────────────────────────────
 //
 
-export default function Index({ setReplacedPart, setColoredPart,closeModal }) {
+export default function Index({ setReplacedPart, setColoredPart, closeModal }) {
   // ─── Global Variable ────────────────────────────────────────────────────────────
   const items = [
     {
@@ -42,7 +42,9 @@ export default function Index({ setReplacedPart, setColoredPart,closeModal }) {
   return (
     <section>
       <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
-      <Button onClick={closeModal} className="w-[200px] m-auto ">ثبت</Button>
+      <div className="flex justify-center w-full">
+        <button onClick={closeModal} className="w-[200px] h-[40px] bg-[#bf003b] disabled:opacity-60 hover:bg-[#8a002c]  text-white rounded-lg  ">ثبت</button>
+      </div>
     </section>
   );
 }

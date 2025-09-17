@@ -111,7 +111,7 @@ export default function Index({
         max: Math.max(...chartPriceList) + 50000000,
         min: Math.min(...chartPriceList) - 50000000,
         labels: {
-          offsetX: -60,
+          offsetX: 0,
           formatter: function (value) {
             return numberWithCommas(value);
           },
@@ -145,7 +145,7 @@ export default function Index({
       <section className="flex justify-end">
         <span
           onClick={hideResult}
-          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-primary"
+          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-[#f3004b]"
         >
           <IconArrowRight className="ml-2 mt-2" />
           <span>بازگشت</span>
@@ -162,7 +162,7 @@ export default function Index({
             </span>
           </section>
           {result?.defectDetails?.length > 0 && (
-            <Button onClick={() => setModal(true)} className="mr-[23px]">
+            <Button type="secondary" onClick={() => setModal(true)} className="mr-[23px]">
               محاسبه افت قیمت
             </Button>
           )}

@@ -40,48 +40,48 @@ export default function Index() {
   //
   return (
     <>
-      <section className="relative m-auto mb-10 mt-10 flex min-h-[671px] w-[98%] items-center rounded-2xl bg-[#0b0b0b]  bg-[url('/assets/images/sportCarBlur.png')] bg-cover bg-center bg-no-repeat">
-        {resultFormShow && (
-          <section className="w-full p-5 transition-all duration-1000 ease-in-out">
+      <section className="relative m-auto mb-10 xl:mt-10 flex min-h-[671px] w-[95%] items-center rounded-2xl bg-[#002a2f]    bg-cover bg-center bg-no-repeat">
+
+        <section className={`w-full p-5 ${resultFormShow ? "block" : "hidden"} transition-all duration-1000 ease-in-out`}>
+          {vehicleState === "Car" && (
+            <CarResult
+              result={result}
+              hideResult={hideResult}
+              chartPriceList={chartPriceList}
+              chartMonthList={chartMonthList}
+            />
+          )}
+          {vehicleState === "Motor" && (
+            <MotorResult result={result} hideResult={hideResult} />
+          )}
+        </section>
+
+
+        <section className={`${!resultFormShow ? "block" : "hidden"} w-full p-5`}>
+          <section>
+            <Filters
+              setVehicleState={setVehicleState}
+              vehicleState={vehicleState}
+            />
             {vehicleState === "Car" && (
-              <CarResult
-                result={result}
-                hideResult={hideResult}
-                chartPriceList={chartPriceList}
-                chartMonthList={chartMonthList}
+              <CarCalculate
+                setResult={setResult}
+                showResult={showResult}
+                setChartPriceList={setChartPriceList}
+                setChartMonthList={setChartMonthList}
               />
             )}
             {vehicleState === "Motor" && (
-              <MotorResult result={result} hideResult={hideResult} />
+              <MotorCalculate setResult={setResult} showResult={showResult} />
+            )}
+            {vehicleState === "Truck" && (
+              <section className="mt-10 flex h-[288px] items-center justify-center">
+                <h1 className="text-[32px] text-white">به زودی</h1>
+              </section>
             )}
           </section>
-        )}
-        {!resultFormShow && (
-          <section className="w-full p-5">
-            <section>
-              <Filters
-                setVehicleState={setVehicleState}
-                vehicleState={vehicleState}
-              />
-              {vehicleState === "Car" && (
-                <CarCalculate
-                  setResult={setResult}
-                  showResult={showResult}
-                  setChartPriceList={setChartPriceList}
-                  setChartMonthList={setChartMonthList}
-                />
-              )}
-              {vehicleState === "Motor" && (
-                <MotorCalculate setResult={setResult} showResult={showResult} />
-              )}
-              {vehicleState === "Truck" && (
-                <section className="mt-10 flex h-[288px] items-center justify-center">
-                  <h1 className="text-[32px] text-white">به زودی</h1>
-                </section>
-              )}
-            </section>
-          </section>
-        )}
+        </section>
+
       </section>
     </>
   );

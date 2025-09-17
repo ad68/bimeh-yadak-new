@@ -31,6 +31,7 @@ export default function Index() {
       {pathName === "/" ||
         pathName === "/login" ||
         pathName === "/dashboard" ||
+        pathName === "/price-calculate-daydar" ||
         pathName.startsWith("/dashboard/") ? (
         ""
       ) : (

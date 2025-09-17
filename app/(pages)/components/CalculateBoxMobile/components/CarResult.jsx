@@ -147,7 +147,7 @@ export default function Index({
             </span>
           </section>
           {result?.defectDetails?.length > 0 && (
-            <Button onClick={() => setModal(true)} className="mb-3 mt-3 w-full">
+            <Button type="secondary" onClick={() => setModal(true)} className="mb-3 mt-3 w-full">
               محاسبه افت قیمت
             </Button>
           )}
@@ -207,7 +207,7 @@ export default function Index({
       <section className="flex justify-end">
         <span
           onClick={hideResult}
-          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-primary"
+          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-[#ff0252]"
         >
           <IconArrowRight className="ml-2 mt-2" />
           <span>بازگشت</span>

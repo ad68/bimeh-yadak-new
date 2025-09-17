@@ -86,7 +86,7 @@ export default function Index({
     useAxios
       .get(
         api.car.searchCarTypeByCarModelAndYear +
-          `?carModelId=${modelId.value}&year=${yearId.value}`,
+        `?carModelId=${modelId.value}&year=${yearId.value}`,
       )
       .then((res) => {
         setTypesLoading(false);
@@ -113,7 +113,7 @@ export default function Index({
     useAxios
       .get(
         api.car.searchUniqueCar +
-          `?modelId=${modelId.value}&typeId=${typeId.value}&year=${yearId.value}`,
+        `?modelId=${modelId.value}&typeId=${typeId.value}&year=${yearId.value}`,
       )
       .then((res) => {
         setButtonLoading(false);
@@ -147,7 +147,7 @@ export default function Index({
     useAxios
       .get(
         api.car.getPriceChart +
-          `?carTypeId=${typeId?.value}&pageNo=0&pageSize=24`,
+        `?carTypeId=${typeId?.value}&pageNo=0&pageSize=24`,
       )
       .then((res) => {
         let resultList = res.data.elements.reverse();
@@ -164,7 +164,7 @@ export default function Index({
         setChartPriceList(priceList);
         setChartMonthList(monthList);
       })
-      .catch((err) => {});
+      .catch((err) => { });
   };
 
   const clearFrom = () => {
@@ -321,12 +321,13 @@ export default function Index({
           <section className="flex h-[40px] w-[78%]  cursor-pointer items-center justify-start rounded-[8px] bg-[#2f2f2f80] px-2 text-xs text-white ">
             {`${coloredParts.length > 0 ? coloredParts.length : "بدون هیچ"} قطعه رنگ شده و ${replacedParts.length > 0 ? replacedParts.length : "بدون هیچ"} قطعه تعویض شده`}
           </section>
-          <Button
+          <button
             onClick={() => setModal(true)}
+            className="bg-[#bf003b] disabled:opacity-60 hover:bg-[#8a002c] rounded-lg text-white"
             style={{ width: "20%", height: 40, fontSize: 12 }}
           >
             افزودن
-          </Button>
+          </button>
         </section>
         <section className="flex justify-center">
           <Button className="ml-2 mt-10" dark onClick={clearFrom}>
@@ -334,6 +335,7 @@ export default function Index({
           </Button>
           <Button
             loading={buttonLoading}
+            type="secondary"
             className="mt-10"
             onClick={() => {
               calculatePrice();

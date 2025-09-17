@@ -32,7 +32,6 @@ export default function Index({ title, link }) {
                 >
                     {title}
                 </Link>
-
             </section>
         </li>
 

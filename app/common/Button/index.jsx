@@ -35,7 +35,11 @@ export default function Index({
     } else {
       if (type === "primary") {
         return "bg-primary text-black";
-      } else if (type === "danger") {
+      }
+      if (type === "secondary") {
+        return "bg-[#bf003b] disabled:opacity-60 hover:bg-[#8a002c] text-white text-black";
+      }
+      else if (type === "danger") {
         return "bg-red text-white";
       } else {
         return "bg-primary text-black";
