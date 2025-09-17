@@ -175,6 +175,7 @@ export default function Index({ showResult, setResult }) {
           <Button
             loading={buttonLoading}
             className="mt-10"
+            type="secondary"
             onClick={() => {
               calculatePrice();
             }}

@@ -29,8 +29,8 @@ export default function Index({
   // ─── Life Cycle ─────────────────────────────────────────────────────────────────
   useEffect(() => {
     if (monthState === 6) {
-      setMonthList(chartMonthList.slice(6, 12));
-      setPriceList(chartPriceList.slice(6, 12));
+      setMonthList(chartMonthList.slice(-6));
+      setPriceList(chartPriceList.slice(-6));
     }
     if (monthState === 12) {
       setMonthList(chartMonthList);

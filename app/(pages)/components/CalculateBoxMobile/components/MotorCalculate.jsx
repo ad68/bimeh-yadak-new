@@ -46,8 +46,8 @@ export default function Index({ showResult, setResult }) {
     useAxios
       .get(
         api.car.searchCarModelByBrand +
-          "?&deviceType=MOTORCYCLE&brandId=" +
-          brandId.value,
+        "?&deviceType=MOTORCYCLE&brandId=" +
+        brandId.value,
       )
       .then((res) => {
         setModelLoading(false);
@@ -175,6 +175,7 @@ export default function Index({ showResult, setResult }) {
           <Button
             loading={buttonLoading}
             className="mt-10"
+            type="secondary"
             onClick={() => {
               calculatePrice();
             }}

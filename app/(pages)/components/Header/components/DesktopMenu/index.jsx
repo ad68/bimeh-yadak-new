@@ -2,7 +2,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
 import { IconMenu, IconLogin } from "@/common/icons";
 import { useAuthStore } from "@/store/auth/login";
 import { isEmptyObject } from "@/helper";
@@ -17,7 +16,6 @@ import { usePathname } from "next/navigation";
 //
 export default function Index({ setOpen, open, setLogOutModal }) {
   // ─── Global Variable ────────────────────────────────────────────────────────────
-
   const authInfo = useAuthStore((state) => state.authInfo);
   const pathName = usePathname()
   // ─── States ─────────────────────────────────────────────────────────────────────
