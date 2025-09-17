@@ -125,7 +125,7 @@ export default function Index({
     setButtonLoading(true);
     let params = {
       colorId: colorId?.value,
-      kilometer: kilometer,
+      kilometer: parseInt(kilometer),
       replacePartDepreciationId: replacedParts,
       coloredPartDepreciationId: coloredParts,
       carId: carId,
