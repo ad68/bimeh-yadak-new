@@ -1,23 +1,19 @@
-import Image from "next/image";
-import CalculateBox from "../components/CalculateBoxDaydar";
-import CalculateBoxMobile from "../components/CalculateBoxMobileDaydar";
-import Link from "next/link";
+import React, { useEffect } from "react";
+import { ArrowsAltOutlined, BgColorsOutlined } from "@ant-design/icons";
 //
 // ────────────────────────────────────────────────────────── I ──────────
 //   :::::: C O M P O N E N T : :  :   :    :     :        :          :
 // ────────────────────────────────────────────────────────────────────
 //
-export const metadata = {
-  title: "ارزش روز خودرو"
-};
-export default function Index() {
+
+export default function Index({ result }) {
   // ─── Global Variable ────────────────────────────────────────────────────────────
 
   // ─── States ─────────────────────────────────────────────────────────────────────
 
-  // ─── Functions ──────────────────────────────────────────────────────────────────
-
   // ─── Life Cycle ─────────────────────────────────────────────────────────────────
+
+  // ─── Functions ──────────────────────────────────────────────────────────────────
 
   //
   // ──────────────────────────────────────────────────── I ──────────
@@ -26,19 +22,38 @@ export default function Index() {
   //
   return (
     <>
-      <section className="px-5 h-[100px] xl:h-[80px] rounded-b-[50%] xl:rounded-md  w-full  border-b shadow-lg flex  justify-center items-center gap-10 mb-5 xl:justify-center  font-bold  ">
-        <Link href="https://dayins24.ir/">
-          <Image src="/assets/images/daydar.png" className="w-[140px] xl:w-[210px]" quality={100} width={300} height={300} alt="" />
-        </Link>
-        {/*   <h1 className="text-[24px] xl:text-[26px] py-1 xl:py-0 font-bold text-center text-[#009ba5]">ارزش روز خودرو</h1> */}
-      </section>
-
-      <section className="container hidden items-center justify-center lg:flex">
-        <CalculateBox />
-      </section>
-      <section className="container flex items-center justify-center lg:hidden">
-        <CalculateBoxMobile />
+      {/*   <ul className="list-disc">
+        {result?.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul> */}
+      <section className="grid w-full grid-cols-2 gap-3 text-[13px]">
+        {result.map((item, index) => (
+          <section
+            key={index}
+            className="mt-1 flex w-full items-center justify-between rounded-lg border border-[#e5e5e5] p-1"
+          >
+            <section>
+              {item.replaced ? (
+                <ArrowsAltOutlined className="rounded-lg bg-[#ff5858] p-1 align-middle text-[22px] text-white" />
+              ) : (
+                <BgColorsOutlined className="rounded-lg bg-[#21B249] p-1 align-middle text-[22px] text-white" />
+              )}
+              <span
+                className={`mr-2 rounded-[8px]  p-1 `}
+              >{`${item.info} ${item.parameter}`}</span>
+            </section>
+            <span className="rounded-[5px] bg-[#0098ff] p-1 text-white ">
+              {item.percent} %
+            </span>
+          </section>
+        ))}
       </section>
     </>
   );
 }
+
+/* رنگ شدگی گلگیر عقب سمت راست 2.79 درصد */
+/* 
+#E9F8ED
+#21B249 */

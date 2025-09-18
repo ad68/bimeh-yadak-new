@@ -1,23 +1,19 @@
+import React, { useState, useContext, useEffect } from "react";
 import Image from "next/image";
-import CalculateBox from "../components/CalculateBoxDaydar";
-import CalculateBoxMobile from "../components/CalculateBoxMobileDaydar";
-import Link from "next/link";
 //
 // ────────────────────────────────────────────────────────── I ──────────
 //   :::::: C O M P O N E N T : :  :   :    :     :        :          :
 // ────────────────────────────────────────────────────────────────────
 //
-export const metadata = {
-  title: "ارزش روز خودرو"
-};
-export default function Index() {
+
+export default function Index({ vehicleState, showResult }) {
   // ─── Global Variable ────────────────────────────────────────────────────────────
 
   // ─── States ─────────────────────────────────────────────────────────────────────
 
-  // ─── Functions ──────────────────────────────────────────────────────────────────
-
   // ─── Life Cycle ─────────────────────────────────────────────────────────────────
+
+  // ─── Functions ──────────────────────────────────────────────────────────────────
 
   //
   // ──────────────────────────────────────────────────── I ──────────
@@ -25,20 +21,30 @@ export default function Index() {
   // ──────────────────────────────────────────────────────────────
   //
   return (
-    <>
-      <section className="px-5 h-[100px] xl:h-[80px] rounded-b-[50%] xl:rounded-md  w-full  border-b shadow-lg flex  justify-center items-center gap-10 mb-5 xl:justify-center  font-bold  ">
-        <Link href="https://dayins24.ir/">
-          <Image src="/assets/images/daydar.png" className="w-[140px] xl:w-[210px]" quality={100} width={300} height={300} alt="" />
-        </Link>
-        {/*   <h1 className="text-[24px] xl:text-[26px] py-1 xl:py-0 font-bold text-center text-[#009ba5]">ارزش روز خودرو</h1> */}
-      </section>
-
-      <section className="container hidden items-center justify-center lg:flex">
-        <CalculateBox />
-      </section>
-      <section className="container flex items-center justify-center lg:hidden">
-        <CalculateBoxMobile />
-      </section>
-    </>
+    <section
+      className={`absolute top-[92px] h-[90%] w-[40%] transition-all duration-1000 ease-in-out ${showResult ? "left-[60%]" : "left-0"}`}
+    >
+      <Image
+        className={`absolute left-[5%] top-[-24%] w-[480px] transition-all duration-200 ${vehicleState === "Car" ? "opacity-1" : "opacity-0"}`}
+        width={514}
+        height={839}
+        src={`/assets/images/bugatti.png`}
+        alt="Picture of the author"
+      />
+      <Image
+        className={`absolute left-[5%] top-[-24%] w-[480px] transition-all duration-200 ${vehicleState === "Motor" ? "opacity-1" : "opacity-0"}`}
+        width={514}
+        height={839}
+        src={`/assets/images/Motor.png`}
+        alt="Picture of the author"
+      />
+      <Image
+        className={`absolute left-[5%] top-[-24%] w-[480px] transition-all duration-200 ${vehicleState === "Truck" ? "opacity-1" : "opacity-0"}`}
+        width={514}
+        height={839}
+        src={`/assets/images/Truck.png`}
+        alt="Picture of the author"
+      />
+    </section>
   );
 }
