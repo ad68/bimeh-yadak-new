@@ -127,6 +127,7 @@ export default function RootLayout({ children }) {
         <TopLoader />
         <ToastProvider />
         <Header />
+
         <main>{children}</main>
         <Footer />
       </body>

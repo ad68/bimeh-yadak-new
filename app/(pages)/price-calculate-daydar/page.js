@@ -32,7 +32,6 @@ export default function Index() {
         </Link>
         {/*   <h1 className="text-[24px] xl:text-[26px] py-1 xl:py-0 font-bold text-center text-[#009ba5]">ارزش روز خودرو</h1> */}
       </section>
-
       <section className="container hidden items-center justify-center lg:flex">
         <CalculateBox />
       </section>

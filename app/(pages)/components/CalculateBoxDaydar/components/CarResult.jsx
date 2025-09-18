@@ -73,12 +73,14 @@ export default function Index({
         toolbar: {
           show: false,
         },
+        zoom: {
+          enabled: false,
+        },
       },
       markers: {
         size: 6,
         strokeWidth: 2,
         strokeColor: "#0491f4",
-
         hover: {
           size: 9,
         },
@@ -86,6 +88,7 @@ export default function Index({
       toolbar: {
         show: false,
       },
+
       dataLabels: {
         enabled: false,
         color: "#78909C",

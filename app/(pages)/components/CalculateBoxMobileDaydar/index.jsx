@@ -13,14 +13,11 @@ import MotorResult from "./components/MotorResult";
 //
 export default function Index() {
   // ─── Global Variable ────────────────────────────────────────────────────────────
-
   // ─── States ─────────────────────────────────────────────────────────────────────
   const [vehicleState, setVehicleState] = useState("Car");
   const [resultFormShow, setResultFormShow] = useState(false);
-
   const [chartPriceList, setChartPriceList] = useState([]);
   const [chartMonthList, setChartMonthList] = useState([]);
-
   const [result, setResult] = useState();
   // ─── Functions ──────────────────────────────────────────────────────────────────
   const showResult = () => {
@@ -33,6 +30,9 @@ export default function Index() {
   useEffect(() => {
     /* showResult(); */
   }, []);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [resultFormShow])
 
   // ──────────────────────────────────────────────────── I ──────────
   //   :::::: R E N D E R : :  :   :    :     :        :          :

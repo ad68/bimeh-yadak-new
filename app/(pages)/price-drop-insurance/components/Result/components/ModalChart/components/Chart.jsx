@@ -30,6 +30,9 @@ function Index({ chartPriceList, chartMonthList }) {
         toolbar: {
           show: false,
         },
+        zoom: {
+          enabled: false,
+        },
       },
       markers: {
         size: 6,
@@ -42,6 +45,7 @@ function Index({ chartPriceList, chartMonthList }) {
       toolbar: {
         show: false,
       },
+
       dataLabels: {
         enabled: false,
         color: "#78909C",

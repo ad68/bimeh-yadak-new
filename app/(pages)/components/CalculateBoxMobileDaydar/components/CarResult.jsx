@@ -23,7 +23,6 @@ export default function Index({
   const [monthList, setMonthList] = useState([]);
   const [priceList, setPriceList] = useState([]);
   const [monthState, setMontState] = useState(6);
-
   const [modal, setModal] = useState(false);
   // ─── Life Cycle ─────────────────────────────────────────────────────────────────
   useEffect(() => {
@@ -66,18 +65,24 @@ export default function Index({
         toolbar: {
           show: false,
         },
+        zoom: {
+          enabled: false,
+        },
       },
       markers: {
         size: 6,
         strokeWidth: 2,
         strokeColor: "#0491f4",
-
         hover: {
           size: 9,
         },
       },
       toolbar: {
         show: false,
+      },
+
+      zoom: {
+        enabled: false,
       },
       dataLabels: {
         enabled: false,
