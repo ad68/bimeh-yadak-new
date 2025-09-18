@@ -88,7 +88,7 @@ export default function Index({ hideResult, result }) {
         </section>
       </section>
       <section className="mt-[20px] rounded-[4px] bg-[#ff797926] p-1 px-4 text-[#fff2f1]">
-        {result?.detailsOutputDtos.map((item, index) => (
+        {result?.detailsOutputDtos?.map((item, index) => (
           <section key={index}>
             <span>{item.reason} : </span>
             <span>{numberWithCommas(item?.depreciationPrice)}</span>
