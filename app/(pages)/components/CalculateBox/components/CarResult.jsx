@@ -163,7 +163,7 @@ export default function Index({
           </section>
           {result?.defectDetails?.length > 0 && (
             <Button type="secondary" onClick={() => setModal(true)} className="mr-[23px]">
-              محاسبه افت قیمت
+              درصد افت قطعات آسیب دیده
             </Button>
           )}
           {result?.imageUrl && (

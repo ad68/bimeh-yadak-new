@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useContext, useEffect } from "react";
 import Filters from "./components/FilterButtons";
-import FilterImage from "./components/FilterImage";
+/* import FilterImage from "./components/FilterImage"; */
 import CarCalculate from "./components/CarCalculate";
 import MotorCalculate from "./components/MotorCalculate";
 import CarResult from "./components/CarResult";
@@ -40,7 +40,7 @@ export default function Index() {
   //
   return (
     <>
-      <section className="relative m-auto mb-10 xl:mt-10 flex min-h-[671px] w-[95%] items-center rounded-2xl bg-[#002a2f]    bg-cover bg-center bg-no-repeat">
+      <section className="relative m-auto mb-10 xl:mt-10 flex w-[95%] items-center rounded-2xl bg-[#002a2f]    bg-cover bg-center bg-no-repeat">
 
         <section className={`w-full p-5 ${resultFormShow ? "block" : "hidden"} transition-all duration-1000 ease-in-out`}>
           {vehicleState === "Car" && (

@@ -11,7 +11,6 @@ const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 //   :::::: C O M P O N E N T : :  :   :    :     :        :          :
 // ────────────────────────────────────────────────────────────────────
 //
-
 export default function Index({
   hideResult,
   result,
@@ -52,7 +51,7 @@ export default function Index({
       {
         name: "قیمت",
         data: priceList,
-        color: "#03f2b4",
+        color: "#0199a8",
       },
     ],
     options: {
@@ -92,7 +91,7 @@ export default function Index({
         type: "gradient",
         gradient: {
           shade: "dark",
-          gradientToColors: ["#0491f4"],
+          gradientToColors: ["#f3004b"],
           shadeIntensity: 1,
           type: "horizontal",
           opacityFrom: 0.6,
@@ -136,51 +135,70 @@ export default function Index({
 
   return (
     <>
+      <section className="flex justify-end">
+        <span
+          onClick={hideResult}
+          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-[#ff0252]"
+        >
+          <IconArrowRight className="ml-2 mt-2" />
+          <span>بازگشت</span>
+        </span>
+      </section>
       <section>
         <section className="mt-3">
-          <section>
-            <span className="block text-xl font-bold text-white">
-              {result?.carName}
-            </span>
-            <span className="block font-normal text-white">
-              {result?.colorName}
-            </span>
+          <section className="flex justify-between items-center">
+            <section>
+              <span className="block text-xl font-bold text-white">
+                {result?.carName}
+              </span>
+              <span className="block font-normal text-white">
+                {result?.colorName}
+              </span>
+            </section>
+            {result?.imageUrl && (
+              <Image
+                className="w-[150px] rounded-[10px] bg-white p-1"
+                src={result?.imageUrl}
+                width={200}
+                height={200}
+                loading="lazy"
+                alt="car picture"
+              />
+            )}
           </section>
-          {result?.defectDetails?.length > 0 && (
-            <Button type="secondary" onClick={() => setModal(true)} className="mb-3 mt-3 w-full">
-              محاسبه افت قیمت
-            </Button>
-          )}
-          {result?.imageUrl && (
-            <Image
-              className="w-full rounded-[10px] bg-white p-1"
-              src={result?.imageUrl}
-              width={200}
-              height={200}
-              loading="lazy"
-              alt="car picture"
-            />
-          )}
-        </section>
-      </section>
-      <section className="m-auto mt-[20px] w-[160px] max-w-full">
-        <section className="mr-[9px] flex flex-col items-center justify-between border-b border-white py-[16px] text-sm font-bold text-white">
-          <span>قیمت کارشناسی ما :</span>
-          <span className="text-md font-bold">
-            {numberWithCommas(result?.price)}
-          </span>
-        </section>
-        <section className="mr-[9px] flex flex-col items-center justify-between border-b border-white py-[16px] text-sm font-bold text-white">
-          <span>حداکثر قیمت در بازار:</span>
-          <span className="mt-1">{numberWithCommas(result?.priceUp)}</span>
-        </section>
-        <section className="mr-[9px] flex flex-col items-center justify-between border-b border-white py-[16px] text-sm font-bold text-white">
-          <span>حداقل قیمت در بازار:</span>
-          <span className="mt-1">{numberWithCommas(result?.priceDown)}</span>
+
+
+
+
         </section>
       </section>
 
-      <section className="mt-[24px] flex items-center justify-center">
+      <section className="m-auto mt-[20px] w-full max-w-full">
+        <section className=" flex flex-col items-center justify-between border-b border-white py-[16px] text-md font-extrabold text-white">
+          <span>قیمت کارشناسی ما :</span>
+          <span className="text-md">
+            {numberWithCommas(result?.price)} تومان
+
+          </span>
+        </section>
+        <div className="flex w-full justify-between">
+          <section className="flex flex-col items-center justify-between  py-[16px] text-sm font-bold text-[#c4003d]">
+            <span>حداکثر قیمت در بازار:</span>
+            <span className="mt-1">{numberWithCommas(result?.priceUp)} تومان</span>
+          </section>
+          <section className=" flex flex-col items-center justify-between py-[16px] text-sm font-bold text-[#0199a8]">
+            <span>حداقل قیمت در بازار:</span>
+            <span className="mt-1">{numberWithCommas(result?.priceDown)} تومان</span>
+          </section>
+        </div>
+
+      </section>
+      {result?.defectDetails?.length > 0 && (
+        <Button type="secondary" onClick={() => setModal(true)} className="mb-3 mt-3 w-[230px] m-auto text-sm">
+          درصد افت قطعات آسیب دیده
+        </Button>
+      )}
+      <section className="mt-[34px] flex items-center justify-center">
         <button
           className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a] bg-[#ffffff1a] p-[5px] text-sm font-normal text-white ${monthState === 12 && "bg-[#ffffff47]"}`}
           onClick={() => setMontState(12)}
@@ -204,15 +222,7 @@ export default function Index({
           height={200}
         />
       </section>
-      <section className="flex justify-end">
-        <span
-          onClick={hideResult}
-          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-[#ff0252]"
-        >
-          <IconArrowRight className="ml-2 mt-2" />
-          <span>بازگشت</span>
-        </span>
-      </section>
+
 
       <Modal
         open={modal}

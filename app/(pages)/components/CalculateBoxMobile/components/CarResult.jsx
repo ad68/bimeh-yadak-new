@@ -148,7 +148,7 @@ export default function Index({
           </section>
           {result?.defectDetails?.length > 0 && (
             <Button type="secondary" onClick={() => setModal(true)} className="mb-3 mt-3 w-full">
-              محاسبه افت قیمت
+              درصد افت قطعات آسیب دیده
             </Button>
           )}
           {result?.imageUrl && (

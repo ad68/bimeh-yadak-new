@@ -24,15 +24,24 @@ export default function Index({ hideResult, result }) {
 
   return (
     <>
+      <section className="flex justify-end">
+        <span
+          onClick={hideResult}
+          className="mt-3 flex w-[130px] cursor-pointer items-center justify-end text-lg text-[#c4003d]"
+        >
+          <IconArrowRight className="ml-2 mt-2" />
+          <span>بازگشت</span>
+        </span>
+      </section>
       <section>
         <section className="mt-3">
           <section className="">
-            <span className="flex gap-2 text-xl font-bold text-white">
-              <span> نام موتور:</span>
-              {result?.brandName}
+            <span className="flex justify-center gap-2 text-xl font-bold text-white">
+              <span>نام موتور:</span>
+              <span>{result?.brandName}</span>
             </span>
           </section>
-          {result?.imageUrl ? (
+          {/*   {result?.imageUrl ? (
             <Image
               className="mb-4 mt-4 block w-full rounded-[10px] bg-white p-1"
               src={result?.imageUrl}
@@ -45,24 +54,29 @@ export default function Index({ hideResult, result }) {
             <section className="mb-4 mt-4 flex h-[125px] w-full items-center justify-center rounded-md border text-white">
               بدون عکس
             </section>
-          )}
+          )} */}
         </section>
       </section>
-      <section className="m-auto mt-[20px] w-[160px] max-w-full">
-        <section className="mr-[9px] flex flex-col items-center justify-between border-b border-white py-[16px] text-sm font-bold text-white">
+
+      <section className="m-auto mt-[10px] w-full max-w-full">
+        <section className=" flex flex-col items-center justify-between border-b border-white py-[16px] text-md font-extrabold text-white">
           <span>قیمت کارشناسی ما :</span>
-          <span className="text-md font-bold">
-            {numberWithCommas(result?.basePrice)}
+          <span className="text-md">
+            {numberWithCommas(result?.basePrice)} تومان
+
           </span>
         </section>
-        <section className="mr-[9px] flex flex-col items-center justify-between border-b border-white py-[16px] text-sm font-bold text-white">
-          <span>حداکثر قیمت در بازار:</span>
-          <span className="mt-1">{numberWithCommas(result?.upperLimit)}</span>
-        </section>
-        <section className="mr-[9px] flex flex-col items-center justify-between border-b border-white py-[16px] text-sm font-bold text-white">
-          <span>حداقل قیمت در بازار:</span>
-          <span className="mt-1">{numberWithCommas(result?.lowerLimit)}</span>
-        </section>
+        <div className="flex w-full justify-between">
+          <section className="flex flex-col items-center justify-between  py-[16px] text-sm font-bold text-[#c4003d]">
+            <span>حداکثر قیمت در بازار:</span>
+            <span className="mt-1">{numberWithCommas(result?.upperLimit)} تومان</span>
+          </section>
+          <section className=" flex flex-col items-center justify-between py-[16px] text-sm font-bold text-[#0199a8]">
+            <span>حداقل قیمت در بازار:</span>
+            <span className="mt-1">{numberWithCommas(result?.lowerLimit)} تومان</span>
+          </section>
+        </div>
+
       </section>
       <section className="mt-[20px] rounded-[4px] bg-[#ff797926] p-1 px-4 text-[#fff2f1]">
         {result?.detailsOutputDtos?.map((item, index) => (
@@ -72,19 +86,12 @@ export default function Index({ hideResult, result }) {
           </section>
         ))}
       </section>
+
       <section className="mt-[20px] rounded-[4px] bg-[#ffffff26] p-1 px-4 text-[#fff2f1]">
         قیمت های نمایشی برای موتور سیکلت مربوط به آخرین مدل موجود در بازار می
         باشد
       </section>
-      <section className="flex justify-end">
-        <span
-          onClick={hideResult}
-          className="mt-3 flex w-[130px] cursor-pointer items-center justify-end text-lg text-primary"
-        >
-          <IconArrowRight className="ml-2 mt-2" />
-          <span>بازگشت</span>
-        </span>
-      </section>
+
     </>
   );
 }

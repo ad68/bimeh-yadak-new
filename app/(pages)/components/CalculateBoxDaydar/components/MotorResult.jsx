@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { IconArrowRight } from "@/common/icons";
 import { numberWithCommas } from "@/helper";
-import Image from "next/image";
+/* import Image from "next/image"; */
 //
 // ────────────────────────────────────────────────────────── I ──────────
 //   :::::: C O M P O N E N T : :  :   :    :     :        :          :
@@ -27,7 +27,7 @@ export default function Index({ hideResult, result }) {
       <section className="flex justify-end">
         <span
           onClick={hideResult}
-          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-primary"
+          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-[#c4003d]"
         >
           <IconArrowRight className="ml-2 mt-2" />
           <span>بازگشت</span>
@@ -49,7 +49,7 @@ export default function Index({ hideResult, result }) {
               مدل موتور
             </span> */}
           </section>
-          {result?.imageUrl ? (
+          {/*  {result?.imageUrl ? (
             <Image
               className="h-[125px] rounded-[10px] bg-white p-1"
               src={result?.imageUrl}
@@ -62,7 +62,7 @@ export default function Index({ hideResult, result }) {
             <section className="flex h-[125px] w-[200px] items-center justify-center rounded-md border text-white">
               بدون عکس
             </section>
-          )}
+          )} */}
         </section>
       </section>
       <section className="mt-[20px] ">
@@ -74,13 +74,13 @@ export default function Index({ hideResult, result }) {
         </section>
       </section>
       <section className="mt-[17px] flex items-center justify-between text-white">
-        <section className="mr-[70px] flex h-[40px] flex-col items-center justify-center text-[16px] font-semibold text-[#ffa8a8]">
+        <section className="mr-[70px] flex h-[40px] flex-col items-center justify-center text-[18px] font-bold text-[#c4003d]">
           <span>حداکثر قیمت در بازار:</span>
           <span className="mt-1">
             {numberWithCommas(result?.upperLimit)} تومان
           </span>
         </section>
-        <section className="ml-[55px] flex h-[40px] flex-col items-center justify-center text-[16px] font-semibold text-[#ceffce]">
+        <section className="ml-[55px] flex h-[40px] flex-col items-center justify-center text-[18px] font-bold text-[#0199a8]">
           <span>حداقل قیمت در بازار:</span>
           <span className="mt-1">
             {numberWithCommas(result?.lowerLimit)} تومان

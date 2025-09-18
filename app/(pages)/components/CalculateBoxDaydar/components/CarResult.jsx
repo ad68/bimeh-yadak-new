@@ -58,7 +58,7 @@ export default function Index({
       {
         name: "قیمت",
         data: priceList,
-        color: "#03f2b4",
+        color: "#0199a8",
       },
     ],
     options: {
@@ -98,7 +98,7 @@ export default function Index({
         type: "gradient",
         gradient: {
           shade: "dark",
-          gradientToColors: ["#0491f4"],
+          gradientToColors: ["#f3004b"],
 
           shadeIntensity: 1,
           type: "horizontal",
@@ -163,7 +163,7 @@ export default function Index({
           </section>
           {result?.defectDetails?.length > 0 && (
             <Button type="secondary" onClick={() => setModal(true)} className="mr-[23px]">
-              محاسبه افت قیمت
+              درصد افت قطعات آسیب دیده
             </Button>
           )}
           {result?.imageUrl && (
@@ -187,13 +187,13 @@ export default function Index({
         </section>
       </section>
       <section className="mt-[17px] flex items-center justify-between text-white">
-        <section className="mr-[70px] flex h-[40px] flex-col items-center justify-center text-[16px] font-semibold text-[#ffa8a8]">
+        <section className="mr-[70px] flex h-[40px] flex-col items-center justify-center text-[18px] font-bold text-[#c4003d]">
           <span>حداکثر قیمت در بازار:</span>
           <span className="mt-1">
             {numberWithCommas(result?.priceUp)} تومان
           </span>
         </section>
-        <section className="ml-[55px] flex h-[40px] flex-col items-center justify-center text-[16px] font-semibold text-[#ceffce]">
+        <section className="ml-[55px] flex h-[40px] flex-col items-center justify-center text-[18px] font-bold text-[#0199a8]">
           <span>حداقل قیمت در بازار:</span>
           <span className="mt-1">
             {numberWithCommas(result?.priceDown)} تومان
