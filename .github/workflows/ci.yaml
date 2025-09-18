@@ -1,0 +1,35 @@
+name: Build and Push Frontend Image
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Log in to Nexus Docker Registry
+        run: echo "${{ secrets.NEXUS_PASS }}" | docker login repository.bakapp.ir -u ${{ secrets.NEXUS_USER }} --password-stdin
+
+      - name: Set version number
+        run: |
+          VERSION=v1.${{ github.run_number }}
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Build frontend image with version and latest tag
+        run: |
+          docker build \
+            -t repository.bakapp.ir/bimeyadak/front:$VERSION \
+            -t repository.bakapp.ir/bimeyadak/front:latest \
+            .
+
+      - name: Push frontend image (version)
+        run: docker push repository.bakapp.ir/bimeyadak/front:$VERSION
+
+      - name: Push frontend image (latest)
+        run: docker push repository.bakapp.ir/bimeyadak/front:latest
