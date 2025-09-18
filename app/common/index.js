@@ -24,5 +24,5 @@ import DatePicker from "./inputs/DatePicker";
 import Table from "./Table";
 import CardInput from "./inputs/CardInput";
 import ExcelPdfDownload from "./ExcelPdfDownload";
-import RouteScrollTop from "./RouteScrollTop";
-export { Select, ExcelPdfDownload, AsyncSelect, CardInput, TextBox, Number, FormatNumber, LoadingSpinner, Button, RangePicker, Modal, CarLicensePlate, CycleLicensePlate, ConfirmModal, QuestionModal, DeleteModal, Notify, ComponentLoading, ErrorMessage, LogoutModal, FullLoading, Gallery, ServerError, DatePicker, Table, FreeOriginPlate, RouteScrollTop };
+
+export { Select, ExcelPdfDownload, AsyncSelect, CardInput, TextBox, Number, FormatNumber, LoadingSpinner, Button, RangePicker, Modal, CarLicensePlate, CycleLicensePlate, ConfirmModal, QuestionModal, DeleteModal, Notify, ComponentLoading, ErrorMessage, LogoutModal, FullLoading, Gallery, ServerError, DatePicker, Table, FreeOriginPlate };

@@ -6,7 +6,7 @@ import { Radio } from "antd";
 /* import {CarLicensePlate} from "@/common"; */
 import { CycleLicensePlate } from "@/common";
 import WithoutPlate from "./components/WithoutPlate";
-import OffenseList from "./components/OffenseList";
+
 import { CarLicensePlate } from "@/common";
 
 // ────────────────────────────────────────────────────────── I ──────────
@@ -14,7 +14,7 @@ import { CarLicensePlate } from "@/common";
 // ────────────────────────────────────────────────────────────────────
 //
 
-export default function  Index() {
+export default function Index() {
   // ─── Global Variable ────────────────────────────────────────────────────────────
 
   // ─── States ─────────────────────────────────────────────────────────────────────
@@ -52,7 +52,7 @@ export default function  Index() {
             alt=""
           />
           <p className="leading-[27.64px] text-[#3E4151]">
-          برای پیگیری مدارک خودرو ، شماره پلاک خود را وارد کنید یا از لیست “ پلاک‌های من” پلاک مد نظر را انتخاب نمایید.
+            برای پیگیری مدارک خودرو ، شماره پلاک خود را وارد کنید یا از لیست “ پلاک‌های من” پلاک مد نظر را انتخاب نمایید.
           </p>
         </section>
         <section className="xl:ml-[33.5px] xl:mr-[29.65px]">
@@ -87,10 +87,10 @@ export default function  Index() {
               setInputValue2={setInputCycleValue2}
             />
           )}
-        </section> 
+        </section>
         <section className="xl:ml-[33.5px] xl:mr-[29.65px] mt-8">
           <p className="mb-3 text-sm text-[#3E4151]">پلاک‌های من</p>
-                 <WithoutPlate />
+          <WithoutPlate />
           {/* <section className="flex flex-col gap-3">
             <OffenseList title="شخصی ایران 40-9843 م 59" />
             <OffenseList title="شخصی ایران 40-9843 م 59" />
