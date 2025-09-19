@@ -78,7 +78,7 @@ export default function Index({ open, setLogOutModal }) {
         </section>}
         <nav className="mt-1 pr-2">
           <MenuLink title="خانه" link="/" />
-          <MenuLink title="خرید بیمه نامه" link="/relief-signup" />
+          {/*    <MenuLink title="خرید بیمه نامه" link="/relief-signup" /> */}
           <MenuLink title="درخواست امداد خودرو" link="/request-relief" />
           <MenuLink title="مشاور و کارشناس فروش" link="/marketing" />
           <MenuLink title="ارزش روز خودرو" link="/price-calculate" />

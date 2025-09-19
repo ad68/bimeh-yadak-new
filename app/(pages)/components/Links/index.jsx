@@ -47,11 +47,11 @@ export default function Index() {
             title="محاسبه افت بیمه خودرو"
             href="/price-drop-insurance"
           />
-          <LinkItem
+          {/*   <LinkItem
             img={Tow}
             title="بیمه امدادگران"
             href="https://emdad.hafezinsurance.ir/bimeh"
-          />
+          /> */}
           <LinkItem
             img={Invoice}
             title="صدور فاکتور امدادگر"
