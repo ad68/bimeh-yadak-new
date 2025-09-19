@@ -98,7 +98,7 @@ const MyDocument = ({
 
                     <View style={styles.line}></View>
                     <View style={styles.section}>
-                        <Text style={styles.textBox}>با عنایت به درخواست آنلاین بیمه نامه، حمل رایگان خودرو با مشخصات ذیل ثبت گردید و با توجه به شرایط 3 روز انتظار در بیمه نامه، شرکت بیمه رازی پوشش امداد را تا سقف تعهدات حداکثر تا 72 ساعت دیگر برای خودرو فعال می نماید.</Text>
+                        <Text style={styles.textBox}>با عنایت به درخواست آنلاین بیمه نامه، حمل رایگان خودرو با مشخصات ذیل ثبت گردید و با توجه به شرایط 3 روز انتظار در بیمه نامه، شرکت بیمه دی پوشش امداد را تا سقف تعهدات حداکثر تا 72 ساعت دیگر برای خودرو فعال می نماید.</Text>
 
                         <View style={{ display: "flex", flexDirection: "row-reverse", marginTop: "10px" }}>
 
@@ -171,7 +171,7 @@ const MyDocument = ({
                     </View>
                     <View style={{ ...styles.section, display: "flex", flexDirection: "row-reverse" }}>
                         <Text style={styles.bold}> :نکته</Text>
-                        <Text style={{ textAlign: "right" }}>حمل خودرو توسط امدادگر به صورت رایگان تا سقف تعهدات بیمه نامه صورت می گیرد و امدادگر هزینه های خود را از شرکت بیمه رازی وفق مستندات دریافت می کند</Text>
+                        <Text style={{ textAlign: "right" }}>حمل خودرو توسط امدادگر به صورت رایگان تا سقف تعهدات بیمه نامه صورت می گیرد و امدادگر هزینه های خود را از شرکت بیمه دی وفق مستندات دریافت می کند</Text>
 
                     </View>
 

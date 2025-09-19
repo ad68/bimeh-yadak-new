@@ -17,6 +17,6 @@ export const USER_DASHBOARD_MENU = [
 ];
 export const MAIN_MENU = [
     { title: "صفحه اصلی", link: "/" },
-    { title: "درباره ما", link: "/about" },
+    /*     { title: "درباره ما", link: "/about" }, */
     { title: "تماس با ما", link: "/contact" },
 ];

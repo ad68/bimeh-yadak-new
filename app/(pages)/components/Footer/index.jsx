@@ -9,7 +9,6 @@ import Image from "next/image";
 //   :::::: C O M P O N E N T : :  :   :    :     :        :          :
 // ────────────────────────────────────────────────────────────────────
 //
-
 export default function Index() {
   // ─── Global Variable ────────────────────────────────────────────────────────────
   const pathName = usePathname();
@@ -48,7 +47,7 @@ export default function Index() {
             />
           </button>
           <section className="xl:flex grid xl:pb-[60px] pb-[30px] border-b  border-[#D9DBE9] xl:gap-[153px] gap-4 xl:w-[1440px] w-[90%]  mx-auto ">
-            <section className="xl:w-[320px] w-[90%]  ">
+            <section className="xl:w-[320px] w-[90%]">
               <div className="flex">
                 <Link href="/">
                   <Image
@@ -73,7 +72,6 @@ export default function Index() {
                 </Link>
 
               </div>
-
               <p className="xl:mt-6 mt-3 text-justify xl:leading-9 leading-[30px] xl:text-sm text-[12px] font-medium xl:pr-0 ">
                 بیمه یدک یک محصول و خدمت جديد بیمه‌ای است که توسط شرکت ایرانیان پوشش
                 راه اندازی شده است.
@@ -115,8 +113,7 @@ export default function Index() {
                     alt=""
                   />
                 </button>
-                <button className="hover:scale-110 hover:transition-all ">
-
+                <button className="hover:scale-110 hover:transition-all">
                   <Image
                     src={"/icons/Facebook.svg"}
                     width={30}
@@ -156,11 +153,11 @@ export default function Index() {
                 آشنایی با ما
               </h2>
               <ul className="xl:mt-10 mt-4 flex flex-col xl:gap-6 gap-4 xl:text-[16px]  text-[14px]  font-medium leading-[20px]">
-                <li>
+                {/*   <li>
                   <Link className="hover:opacity-50" href="/about">
                     درباره ما
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <button className="hover:opacity-50">اخبار</button>
                 </li>
@@ -205,14 +202,11 @@ export default function Index() {
                     className="xl:size-[30px] size-6"
                     alt=""
                   />
-
                   <span className="xl:w-[260px] ">
                     آدرس: تهران یوسف اباد میدان سلماس خیابان شهریار بالاتر از خیابان چهاردهم پلاک 39 ساختمان سناپ
                   </span>
                 </li>
               </ul>
-
-
             </section>
             <section className="flex  mt-4 gap-[32px] justify-center items-center xl:hidden">
               <button className="hover:scale-110 hover:transition-all ">
@@ -262,9 +256,6 @@ export default function Index() {
               </button>
             </section>
             <section className="">
-
-
-
             </section>
           </section>
           <span className="block w-full text-center py-4 !border-t !border-primary">

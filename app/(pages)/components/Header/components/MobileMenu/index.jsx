@@ -84,8 +84,7 @@ export default function Index({ open, setLogOutModal }) {
           <MenuLink title="ارزش روز خودرو" link="/price-calculate" />
           <MenuLink title="محاسبه افت بیمه خودرو" link="/price-drop-insurance" />
           <MenuLink title="ثبت نام امدادگران" link="/road-assistance-signup" />
-          <MenuLink title="مجله" link="https://mag.bimehyadak.com" />
-          <MenuLink title="درباره ما" link="/about" />
+          {/*           <MenuLink title="درباره ما" link="/about" /> */}
           <MenuLink title="تماس با ما" link="/contact-us" />
         </nav>
         {authStatus !== "notLoggedIn" && <button

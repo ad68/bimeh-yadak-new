@@ -9,11 +9,8 @@ const TopNavigation = () => {
         <MenuLink title="درخواست امداد خودرو" link="/request-relief" />
         <MenuLink title="مشاور و کارشناس فروش" link="/marketing" />
         <MenuLink title="ثبت نام امدادگران" link="/road-assistance-signup" />
-
-        <MenuLink title="مجله" link="https://mag.bimehyadak.com" />
-        <MenuLink title="درباره ما" link="/about" />
+        {/*<MenuLink title="درباره ما" link="/about" /> */}
         <MenuLink title="تماس با ما" link="/contact-us" />
-
       </ul>
     </>
   );

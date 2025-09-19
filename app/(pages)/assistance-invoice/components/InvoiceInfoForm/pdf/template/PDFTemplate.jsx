@@ -308,7 +308,7 @@ const MyDocument = ({
                         <View style={{ width: "100px", height: "100px" }}></View>
                     </View>
                     <View style={styles.singBox}>
-                        <Text style={styles.signText}>:تایید بیمه رازی</Text>
+                        <Text style={styles.signText}>:تایید بیمه دی</Text>
                         <View style={{ width: "100px", height: "100px" }}></View>
                     </View>
 
