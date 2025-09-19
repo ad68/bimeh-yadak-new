@@ -237,7 +237,7 @@ select__menu-list::-webkit-scrollbar-thumb:hover {
   width: 3em;
   height: 5.13em;
   border-radius: 1em/0.5em;
-  background: #f3c401;
+  background: #fdb713;
   transition: opacity 0.5s;
   transform: rotate(30deg);
 }

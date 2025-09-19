@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Money from "../../../public/icons/Group10Pink.svg";
 import CalculateBox from "../components/CalculateBoxDaydar";
 import CalculateBoxMobile from "../components/CalculateBoxMobileDaydar";
 import Link from "next/link";
@@ -25,19 +26,26 @@ export default function Index() {
   // ──────────────────────────────────────────────────────────────
   //
   return (
-    <>
-      <section className="px-5 h-[100px] xl:h-[80px] rounded-b-[50%] xl:rounded-md  w-full  border-b shadow-lg flex  justify-center items-center gap-10 mb-5 xl:justify-center  font-bold  ">
-        <Link href="https://dayins24.ir/">
-          <Image src="/assets/images/daydar.png" className="w-[140px] xl:w-[210px]" quality={100} width={300} height={300} alt="" />
+    <section className="mt-10 xl:mt-0 xl:h-screen flex flex-col justify-center items-center">
+      {/*  <section className="px-5 h-[100px] xl:h-[80px] rounded-b-[50%] xl:rounded-md  w-full  border-b shadow-lg flex  justify-center items-center gap-10 mb-5 xl:justify-center  font-bold  ">
+         <Link className="text-[#009ba5] flex gap-4 xl:text-[30px]" href="https://dayins24.ir/">
+          <Image src={Money} className="w-[60px]" alt="" />
+          ارزش روز خودرو
         </Link>
-        {/*   <h1 className="text-[24px] xl:text-[26px] py-1 xl:py-0 font-bold text-center text-[#009ba5]">ارزش روز خودرو</h1> */}
-      </section>
+      
+      </section> */}
       <section className="container hidden items-center justify-center lg:flex">
         <CalculateBox />
       </section>
       <section className="container flex items-center justify-center lg:hidden">
         <CalculateBoxMobile />
       </section>
-    </>
+      <div className="xl:mt-5 fixed bottom-0 w-full left-0 py-2 flex justify-center bg-slate-100  text-[14px] text-slate-800   gap-2 " >
+        <span>قدرت گرفته از</span>
+        <Link className="text-[#fdb713] font-bold" href="https://bimehyadak.ir">
+          بیمه یدک
+        </Link>
+      </div>
+    </section>
   );
 }
