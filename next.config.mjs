@@ -16,6 +16,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "newsmedia.tasnimnews.com",
+      },
+      {
+        protocol: "https",
         hostname: "cc.tazminyadak.com",
       },
       {
