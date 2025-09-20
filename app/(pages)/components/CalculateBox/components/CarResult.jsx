@@ -177,6 +177,7 @@ export default function Index({
               width={200}
               height={200}
               loading="lazy"
+              unoptimized={true}
               alt="car picture"
             />
           )}
