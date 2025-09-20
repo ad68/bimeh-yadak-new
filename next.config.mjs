@@ -23,9 +23,14 @@ const nextConfig = {
         hostname: "cc.tazminmashin.com",
       },
       {
+        protocol: "https",
+        hostname: "bimehyadak.ir",
+      },
+
+      {
         protocol: "http",
         hostname: "localhost",
-        port: "3000", // نیازی به ":" نیست
+        port: "3000",
       },
     ],
   },
