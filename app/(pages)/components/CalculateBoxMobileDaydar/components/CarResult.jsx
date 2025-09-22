@@ -50,7 +50,7 @@ export default function Index({
       {
         name: "قیمت",
         data: priceList,
-        color: "#0199a8",
+        color: "#cb1a51",
       },
     ],
     options: {
@@ -72,7 +72,7 @@ export default function Index({
       markers: {
         size: 6,
         strokeWidth: 2,
-        strokeColor: "#0491f4",
+        strokeColor: "white",
         hover: {
           size: 9,
         },
@@ -96,7 +96,7 @@ export default function Index({
         type: "gradient",
         gradient: {
           shade: "dark",
-          gradientToColors: ["#f3004b"],
+          gradientToColors: ["#ED3F27"],
           shadeIntensity: 1,
           type: "horizontal",
           opacityFrom: 0.6,
@@ -143,7 +143,7 @@ export default function Index({
       <section className="flex justify-end">
         <span
           onClick={hideResult}
-          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-[#ff0252]"
+          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-white"
         >
           <IconArrowRight className="ml-2 mt-2" />
           <span>بازگشت</span>
@@ -188,11 +188,11 @@ export default function Index({
           </span>
         </section>
         <div className="flex w-full justify-between">
-          <section className="flex flex-col items-center justify-between  py-[16px] text-sm font-bold text-[#c4003d]">
+          <section className="flex flex-col items-center justify-between  py-[16px] text-sm font-bold text-[#FFD8D1]">
             <span>حداکثر قیمت در بازار:</span>
             <span className="mt-1">{numberWithCommas(result?.priceUp)} تومان</span>
           </section>
-          <section className=" flex flex-col items-center justify-between py-[16px] text-sm font-bold text-[#0199a8]">
+          <section className=" flex flex-col items-center justify-between py-[16px] text-sm font-bold text-[#c6ffc6]">
             <span>حداقل قیمت در بازار:</span>
             <span className="mt-1">{numberWithCommas(result?.priceDown)} تومان</span>
           </section>
@@ -206,13 +206,13 @@ export default function Index({
       )}
       <section className="mt-[34px] flex items-center justify-center">
         <button
-          className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a] bg-[#ffffff1a] p-[5px] text-sm font-normal text-white ${monthState === 12 && "bg-[#ffffff47]"}`}
+          className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a] bg-[#ffffff1a] p-[5px] text-sm font-normal text-white ${monthState === 12 && "bg-[#cb1a51]"}`}
           onClick={() => setMontState(12)}
         >
           12 ماه
         </button>
         <button
-          className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a] bg-[#ffffff1a] p-[5px] text-sm font-normal text-white ${monthState === 6 && "bg-[#ffffff47]"}`}
+          className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a] bg-[#ffffff1a] p-[5px] text-sm font-normal text-white ${monthState === 6 && "bg-[#cb1a51]"}`}
           onClick={() => setMontState(6)}
         >
           6 ماه

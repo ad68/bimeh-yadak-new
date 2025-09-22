@@ -40,7 +40,7 @@ export default function Index() {
   //
   return (
     <>
-      <section className="relative m-auto mb-10 xl:mt-10 flex w-[95%] items-center rounded-2xl bg-[#002a2f]    bg-cover bg-center bg-no-repeat">
+      <section className="relative m-auto mb-10 xl:mt-10 flex w-[95%] items-center rounded-2xl bg-[#0099a8] bg-cover bg-center bg-no-repeat">
 
         <section className={`w-full p-5 ${resultFormShow ? "block" : "hidden"} transition-all duration-1000 ease-in-out`}>
           {vehicleState === "Car" && (
@@ -55,8 +55,6 @@ export default function Index() {
             <MotorResult result={result} hideResult={hideResult} />
           )}
         </section>
-
-
         <section className={`${!resultFormShow ? "block" : "hidden"} w-full p-5`}>
           <section>
             <Filters

@@ -40,10 +40,10 @@ export default function Index() {
       <section className="container flex items-center justify-center lg:hidden">
         <CalculateBoxMobile />
       </section>
-      <div className="xl:mt-5 fixed bottom-0 w-full left-0 py-2 flex justify-center bg-slate-100  text-[14px] text-slate-800   gap-2 " >
+      <div className="w-full left-0 py-2 flex justify-center  text-[14px] text-slate-800  gap-2 " >
         <span>قدرت گرفته از</span>
-        <Link className="text-[#fdb713] font-bold" href="https://bimehyadak.ir">
-          بیمه یدک
+        <Link className="text-[#0099a8] font-bold" href="https://www.iranianpooshesh.com/fa">
+          ایرانیان پوشش
         </Link>
       </div>
     </section>

@@ -27,7 +27,7 @@ export default function Index({ hideResult, result }) {
       <section className="flex justify-end">
         <span
           onClick={hideResult}
-          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-[#c4003d]"
+          className="flex w-[130px] cursor-pointer items-center justify-end text-lg text-white"
         >
           <IconArrowRight className="ml-2 mt-2" />
           <span>بازگشت</span>
@@ -74,13 +74,13 @@ export default function Index({ hideResult, result }) {
         </section>
       </section>
       <section className="mt-[17px] flex items-center justify-between text-white">
-        <section className="mr-[70px] flex h-[40px] flex-col items-center justify-center text-[18px] font-bold text-[#c4003d]">
+        <section className="mr-[70px] flex h-[40px] flex-col items-center justify-center text-[18px] font-bold text-[#FFD8D1]">
           <span>حداکثر قیمت در بازار:</span>
           <span className="mt-1">
             {numberWithCommas(result?.upperLimit)} تومان
           </span>
         </section>
-        <section className="ml-[55px] flex h-[40px] flex-col items-center justify-center text-[18px] font-bold text-[#0199a8]">
+        <section className="ml-[55px] flex h-[40px] flex-col items-center justify-center text-[18px] font-bold text-[#c6ffc6]">
           <span>حداقل قیمت در بازار:</span>
           <span className="mt-1">
             {numberWithCommas(result?.lowerLimit)} تومان

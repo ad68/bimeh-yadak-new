@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { IconArrowRight } from "@/common/icons";
 import { numberWithCommas } from "@/helper";
 import dynamic from "next/dynamic";

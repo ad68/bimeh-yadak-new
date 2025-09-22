@@ -47,7 +47,7 @@ export default function Index() {
   //
   return (
     <>
-      <section className="relative mb-0 flex h-[680px] w-full items-center  rounded-2xl bg-[#002a2f] bg-cover bg-center bg-no-repeat md:w-[95%]">
+      <section className="relative mb-0 flex h-[680px] w-full items-center  rounded-2xl bg-[#0099a8] bg-cover bg-center bg-no-repeat md:w-[95%]">
         <FilterImage vehicleState={vehicleState} showResult={animate} />
         <section className={`absolute left-[5%] ${calculateResultShow ? `block` : `hidden`} top-0 h-[100%] w-[55%] p-5 transition-all duration-1000 ease-in-out`}>
           {vehicleState === "Car" && (
