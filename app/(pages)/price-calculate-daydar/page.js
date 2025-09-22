@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Money from "../../../public/icons/Group10Pink.svg";
 import CalculateBox from "../components/CalculateBoxDaydar";
 import CalculateBoxMobile from "../components/CalculateBoxMobileDaydar";
 import Link from "next/link";
@@ -32,7 +30,6 @@ export default function Index() {
           <Image src={Money} className="w-[60px]" alt="" />
           ارزش روز خودرو
         </Link>
-      
       </section> */}
       <section className="container hidden items-center justify-center lg:flex">
         <CalculateBox />

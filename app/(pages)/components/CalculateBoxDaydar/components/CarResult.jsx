@@ -205,13 +205,13 @@ export default function Index({
       </section>
       <section className="mt-[24px] flex items-center justify-center">
         <button
-          className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a] bg-[#ffffff1a] p-[5px] text-sm font-normal text-white ${monthState === 12 && "bg-[#cb1a51]"}`}
+          className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a]  p-[5px] text-sm font-normal text-white ${monthState === 12 ? "bg-[#cb1a51]" : "bg-[#ffffff1a]"}`}
           onClick={() => setMontState(12)}
         >
           12 ماه
         </button>
         <button
-          className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a] bg-[#ffffff1a] p-[5px] text-sm font-normal text-white ${monthState === 6 && "bg-[#cb1a51]"}`}
+          className={`mr-2.5 min-w-[100px] rounded-[101px] border  border-solid border-[#ffffff1a]  p-[5px] text-sm font-normal text-white ${monthState === 6 ? "bg-[#cb1a51]" : "bg-[#ffffff1a]"}`}
           onClick={() => setMontState(6)}
         >
           6 ماه
